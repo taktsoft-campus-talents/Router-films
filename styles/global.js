@@ -62,6 +62,12 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 5,  
   },
+  imageBigAuthor: {
+    width:'100%',
+    height:300,
+    marginBottom: 5,
+    marginTop: 5,    
+  },
   ulAuthors: {
     width:'100%',
     marginBottom: 5,
@@ -70,7 +76,7 @@ export const globalStyles = StyleSheet.create({
   ulAuthorsIn: {
     padding: 20,
     width:'100%',
-    height:  '45%',
+    height:  '26%',
     marginBottom: 10,
     marginTop: 0, 
   },
@@ -91,7 +97,7 @@ export const globalStyles = StyleSheet.create({
   showMore: {
     fontSize: 10,
     color: COLORS.accent,
-    marginBottom: 5,
+    marginBottom: 10,
   },
   movie_block: {
     width: "50%",
@@ -103,4 +109,7 @@ export const globalStyles = StyleSheet.create({
   img_of_actor: {
     width: 100,
   },
+  actor_about:{
+    color: COLORS.light,
+  }
 });

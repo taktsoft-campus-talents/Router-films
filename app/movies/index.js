@@ -7,6 +7,7 @@ export default function MoviePage() {
   return (
     <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.h1}>Movie Page</Text>
+      <Link style={globalStyles.showMore} href={"/"}>Home ..</Link>
       <View style={globalStyles.ulAuthorsInView}>
       {movies.map((movie, index) => (
           <View style={globalStyles.movie_block} key={movie.id}>

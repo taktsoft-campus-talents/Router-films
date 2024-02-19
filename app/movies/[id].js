@@ -47,7 +47,7 @@ export default function MovieDetailPage() {
             <View style={globalStyles.ulAuthorsInView}>
                 {actorsArr.map((actor, index_a) => {
                     return (
-                      <Link href={'/actors/'+actor.id} key={actor.id}> 
+                      <Link href={'actors/'+actor.id+'?movie_last='+id} key={actor.id}>
                         <View style={globalStyles.img_of_actor}>
                           <Text style={globalStyles.emAuthor}>{actor.name}</Text>
                           <Image source={{ uri: `${actor.image}` }} style={globalStyles.actorMovieImage} />

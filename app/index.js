@@ -16,6 +16,11 @@ export default function HomePage() {
       <Link style={globalStyles.link} href="movies">
         Movies
       </Link>
+      <Link style={globalStyles.link} href="actors">
+        Actors
+      </Link>
+      
+
     </View>
   );
 }
