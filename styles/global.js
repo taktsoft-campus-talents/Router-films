@@ -42,6 +42,11 @@ export const globalStyles = StyleSheet.create({
     color: COLORS.grey,
     marginBottom: 1,
   },
+  hemAuthor: {
+    fontSize: 8,
+    color: COLORS.light,
+    marginBottom: 1,
+  },
   link: {
     fontSize: 18,
     color: COLORS.accent,
@@ -76,9 +81,12 @@ export const globalStyles = StyleSheet.create({
   ulAuthorsIn: {
     padding: 20,
     width:'100%',
-    height:  '26%',
+    height:  '46%',
     marginBottom: 10,
     marginTop: 0, 
+  },
+  link_of_actor: {
+    marginBottom: 10,
   },
   ulAuthorsInView: {
     flex:1,

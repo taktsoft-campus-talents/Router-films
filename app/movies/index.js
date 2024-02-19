@@ -1,12 +1,12 @@
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { Link } from "expo-router";
 import { globalStyles } from "../../styles/global";
-import { movies } from "../../data/movies.js"; 
+import { movies } from "../../data/movies.js";
+import { Image } from "expo-image";
 
 export default function MoviePage() {
   return (
     <ScrollView style={globalStyles.container}>
-      <Text style={globalStyles.h1}>Movie Page</Text>
       <Link style={globalStyles.showMore} href={"/"}>Home ..</Link>
       <View style={globalStyles.ulAuthorsInView}>
       {movies.map((movie, index) => (

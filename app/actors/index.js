@@ -6,7 +6,6 @@ import { actors } from "../../data/actors.js";
 export default function ActorsPage() {
   return (
     <ScrollView style={globalStyles.container}>
-      <Text style={globalStyles.h1}>Movie Page</Text>
       <Link style={globalStyles.showMore} href={"/"}>Home ..</Link>
       <View style={globalStyles.ulAuthorsInView}>
       {actors.map((actor, index) => (

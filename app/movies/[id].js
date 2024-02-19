@@ -1,9 +1,10 @@
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { Link } from "expo-router";
 import { globalStyles } from "../../styles/global";
 import { useLocalSearchParams } from "expo-router";
 import { actors } from "../../data/actors.js";
-import { movies } from "../../data/movies.js"; 
+import { movies } from "../../data/movies.js";
+import { Image } from "expo-image";
 
 export default function MovieDetailPage() {
 
@@ -17,12 +18,15 @@ export default function MovieDetailPage() {
 
   let actorsArr = actors.filter((actor) => {
     const findet_Author = movieArr.cast.filter((actor_m) => {
-      return actor_m.character == actor.character
+      return actor_m.id == actor.id
     })[0]
+    
     if(findet_Author!=undefined){
       return actor.id == findet_Author.id;
     }
   });
+
+  //console.log(actorsArr)
 
   return (
 
@@ -32,7 +36,6 @@ export default function MovieDetailPage() {
 
         <Text style={globalStyles.h1}>{movieArr.title}</Text>
         <Text style={globalStyles.h4}>{movieArr.tagline}</Text>
-        <Link style={globalStyles.showMore} href={"/movies/"}>Back to list..</Link>
         
         <View style={globalStyles.movie_blockIn}>
           <Image source={{ uri: `${movieArr.image}` }} style={globalStyles.imageBig} />
@@ -47,9 +50,9 @@ export default function MovieDetailPage() {
             <View style={globalStyles.ulAuthorsInView}>
                 {actorsArr.map((actor, index_a) => {
                     return (
-                      <Link href={'actors/'+actor.id+'?movie_last='+id} key={actor.id}>
+                      <Link style={globalStyles.link_of_actor} href={'actors/'+actor.id+'?movie_last='+id} key={actor.id}>
                         <View style={globalStyles.img_of_actor}>
-                          <Text style={globalStyles.emAuthor}>{actor.name}</Text>
+                          <Text style={globalStyles.hemAuthor}>{actor.name}</Text>
                           <Image source={{ uri: `${actor.image}` }} style={globalStyles.actorMovieImage} />
                           <Text style={globalStyles.emAuthor}>as {actor.character}</Text>
                         </View>
