@@ -5,11 +5,13 @@ import { movies } from "../../data/movies.js";
 import { Image } from "expo-image";
 
 export default function MoviePage() {
+
   return (
+    
     <ScrollView style={globalStyles.container}>
       <Link style={globalStyles.showMore} href={"/"}>Home ..</Link>
       <View style={globalStyles.ulAuthorsInView}>
-      {movies.map((movie, index) => (
+      {movies.map((movie) => (
           <View style={globalStyles.movie_block} key={movie.id}>
             <View style={globalStyles.movie_img}>
               <Link href={"/movies/" + movie.id} style={globalStyles.movie_img_link}>

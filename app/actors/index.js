@@ -3,7 +3,10 @@ import { Link } from "expo-router";
 import { globalStyles } from "../../styles/global.js";
 import { actors } from "../../data/actors.js"; 
 
-export default function ActorsPage() {
+export default function ActorsPage(props) {
+  
+  console.log(props)
+
   return (
     <ScrollView style={globalStyles.container}>
       <Link style={globalStyles.showMore} href={"/"}>Home ..</Link>

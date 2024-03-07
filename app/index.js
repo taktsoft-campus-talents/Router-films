@@ -1,6 +1,8 @@
-import { View, Text } from "react-native";
+import { Linking, View, Text } from "react-native";
 import { Link } from "expo-router";
 import { globalStyles } from "../styles/global";
+
+console.log(Linking.getInitialURL())
 
 export default function HomePage() {
   return (
@@ -12,8 +14,6 @@ export default function HomePage() {
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
         amet.
       </Text>
-
-
     </View>
   );
 }

@@ -3,12 +3,16 @@ import { Link } from "expo-router";
 import { globalStyles } from "../../styles/global.js";
 import { useLocalSearchParams } from "expo-router";
 import { actors } from "../../data/actors.js";
-import { movies } from "../../data/movies.js"; 
+import { movies } from "../../data/movies.js";
+import { useState } from "react";
 
-export default function ActorDetailPage() {
+export default function ActorDetailPage(props) {
+
+  //console.log(index)
 
   const { id, movie_last } = useLocalSearchParams();
-//  console.log(movie_last)
+
+  console.log(props)
 
   let actor = actors.filter((actor_m) => {
     return actor_m.id == id;
